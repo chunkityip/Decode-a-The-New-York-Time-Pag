@@ -2,12 +2,12 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
-source = requests.get('https://www.nytimes.com').text
-#To get source code from NewYorkTime(NYT) webiste by using the requests library
-#To get the source code from response object , add text
+url = requests.get('https://www.nytimes.com').text
+#To get url code from NewYorkTime(NYT) webiste by using the requests library
+#To get the url code from response object , add text
 #https://2.python-requests.org/en/master/user/quickstart/#response-content
 
-soup = BeautifulSoup(source, 'lxml')
+soup = BeautifulSoup(url, 'lxml')
 # lxml is a library that processing XML and HTML
 
 tag = soup.findAll('h2')
